@@ -1,0 +1,15 @@
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\bin\Debug\net9.0\menloInterviewApp.exe
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\bin\Debug\net9.0\menloInterviewApp.deps.json
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\bin\Debug\net9.0\menloInterviewApp.runtimeconfig.json
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\bin\Debug\net9.0\menloInterviewApp.dll
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\bin\Debug\net9.0\menloInterviewApp.pdb
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.AssemblyInfoInputs.cache
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.AssemblyInfo.cs
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.csproj.CoreCompileInputs.cache
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.sourcelink.json
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.dll
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\refint\menloInterviewApp.dll
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.pdb
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\menloInterviewApp.genruntimeconfig.cache
+C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\obj\Debug\net9.0\ref\menloInterviewApp.dll
