@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("menloInterviewApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76d5fd62a2a25ab3e3d3fa047b394547eb59bff9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb81c2bed0aff0b25c12eb9fc9acf3bf820e7276")]
 [assembly: System.Reflection.AssemblyProductAttribute("menloInterviewApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("menloInterviewApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
