@@ -8,7 +8,7 @@ namespace menloInterviewApp
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\test.txt";
+            // string path = @"C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\test.txt";
             readFile();
         }
         //main option2:use File c# (working) heavyer
@@ -123,5 +123,8 @@ namespace menloInterviewApp
                 throw;
             }
         }
+
+
+
     }
 }
