@@ -10,16 +10,28 @@ namespace formatApi
             string fileName = Guid.NewGuid().ToString() + extension;
             string uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
             string fullPath = Path.Combine(uploadPath, fileName);
+            // if (file == null || file.Length == 0)
+            // {
+            //     Console
+            // }
 
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
             }
-            using (var stream = new FileStream(fullPath, FileMode.Create))
+            try
             {
-                file.CopyTo(stream);
+                await using (var stream = new FileStream(fullPath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                return new string[] { fullPath, extension };
             }
-            return new string[] { fullPath, extension };
+            catch (Exception e)
+            {
+                throw new Exception("Exception", e);
+            }
+
         }
 
     }
