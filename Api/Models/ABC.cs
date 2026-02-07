@@ -30,11 +30,14 @@ namespace formatApi
         {
             StringBuilder sanitizesLine = new StringBuilder();
 
-            for (int i = 0; i < line.Length; i = i + this.numberOfBytes)
+            for (int i = 0; i < line.Length; i = i += this.numberOfBytes)
             {
-                if (Regex.IsMatch(line.Substring(i, this.numberOfBytes), this.correctReg))
+                int length = Math.Min(this.numberOfBytes, line.Length - i);
+                string slop = line.Substring(i, length);
+
+                if (Regex.IsMatch(slop, this.correctReg))
                 {
-                    sanitizesLine.Append(line.Substring(i, this.numberOfBytes));
+                    sanitizesLine.Append(slop);
                 }
                 else
                 {
@@ -91,7 +94,7 @@ namespace formatApi
                 Console.WriteLine(e);
 
             }
-            return tmp;
+            return this.fileLocation;
         }
     }
 }
