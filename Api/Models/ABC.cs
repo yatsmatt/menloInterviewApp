@@ -7,12 +7,21 @@ namespace formatApi
     public class ABC : abstractFormat
     {
 
+        public ABC(string fileLocation) : base()
+        {
+            this.fileLocation = fileLocation;
+            this.numberOfBytes = 3;
+            this.header = "123";
+            this.footer = "789";
+            this.replaceReg = "A255C";
+            this.correctReg = "A[1-9]C";
+        }
         public ABC(string fileLocation, int numberOfBytes, string header, string footer, string replaceReg, string correctReg) : base()
         {
             this.fileLocation = fileLocation;
             this.numberOfBytes = numberOfBytes;
             this.header = header;
-            this.footer = footer;//
+            this.footer = footer;
             this.replaceReg = replaceReg;
             this.correctReg = correctReg;
         }
@@ -39,11 +48,7 @@ namespace formatApi
         {
             // string path = @"C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\test.txt";
             string tmp = "temp.txt";
-            // int numberOfBytes = 3;
-            // string replace = "A255C";
-            // string correct = @"A[1-9]C";
-            // string checkStart = @"123";
-            // string checkEnd = @"789";
+
             try
             {
                 using (var reader = new StreamReader(this.fileLocation))
@@ -78,22 +83,11 @@ namespace formatApi
                 File.Move(tmp, this.fileLocation);
 
             }
-            catch (System.Exception)
+            catch (System.Exception e)
             {
 
-                throw;
+                Console.WriteLine(e);
             }
         }
-
-        // static string sanitizesEdges(string line, int numberOfBytes, string correct, int index)
-        // {
-        //     StringBuilder sanitizesTxt = new StringBuilder();
-        //     string edge = line.Substring(index, numberOfBytes);
-        //     if (Regex.IsMatch(edge, correct))
-        //     {
-        //         sanitizesTxt.Append(edge);
-        //     }
-        //     return sanitizesTxt.ToString();
-        // }
     }
 }
