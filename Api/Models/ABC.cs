@@ -1,12 +1,21 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace formatApi
 {
-    public class ABC : abstractFormat
+    public class ABC : AbstractFormat
     {
-
+        public ABC() : base()
+        {
+            this.numberOfBytes = 3;
+            this.header = "123";
+            this.footer = "789";
+            this.replaceReg = "A255C";
+            this.correctReg = "A[1-9]C";
+        }
         public ABC(string fileLocation) : base()
         {
             this.fileLocation = fileLocation;
@@ -15,15 +24,6 @@ namespace formatApi
             this.footer = "789";
             this.replaceReg = "A255C";
             this.correctReg = "A[1-9]C";
-        }
-        public ABC(string fileLocation, int numberOfBytes, string header, string footer, string replaceReg, string correctReg) : base()
-        {
-            this.fileLocation = fileLocation;
-            this.numberOfBytes = numberOfBytes;
-            this.header = header;
-            this.footer = footer;
-            this.replaceReg = replaceReg;
-            this.correctReg = correctReg;
         }
 
         public override string sanitizesLine(string line)
@@ -44,9 +44,8 @@ namespace formatApi
             return sanitizesLine.ToString();
         }
 
-        public override void sanitizeFile()
+        public override string sanitizeFile()
         {
-            // string path = @"C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\test.txt";
             string tmp = "temp.txt";
 
             try
@@ -63,6 +62,7 @@ namespace formatApi
                             if (Regex.IsMatch(line.Trim(), this.header))
                             {
                                 writer.WriteLine(line);
+                                Console.WriteLine(line);
                             }
                             isFirstLine = false;
                         }
@@ -71,11 +71,13 @@ namespace formatApi
                             if (Regex.IsMatch(line.Trim(), this.footer))
                             {
                                 writer.WriteLine(line);
+                                Console.WriteLine(line);
                             }
                         }
                         else
                         {
                             writer.WriteLine(sanitizesLine(line));
+                            Console.WriteLine(sanitizesLine(line));
                         }
                     }
                 }
@@ -87,7 +89,9 @@ namespace formatApi
             {
 
                 Console.WriteLine(e);
+
             }
+            return tmp;
         }
     }
 }

@@ -14,15 +14,18 @@ namespace formatApi
             try
             {
                 info = await new UploadHendler().Uploads(file);
-                Console.WriteLine(info[0]);
-                Console.WriteLine(info[1]);
+                string UploadPath = info[0];
+                string Extension = info[1];
+                AbstractFormat fileObj = FormatFactory.getFormat(Extension, UploadPath);
+                string fileContent = fileObj.sanitizeFile();
+                return Ok(fileContent);
             }
-            catch (System.Exception e)
-            {
 
-                throw;
+            catch (Exception e)
+            {
+                throw new Exception("Exception", e);
             }
-            return Ok(new { UploadPath = info[0], Extension = info[1] });
+
         }
     }
 }
