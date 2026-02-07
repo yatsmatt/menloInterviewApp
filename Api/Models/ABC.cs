@@ -38,7 +38,7 @@ namespace formatApi
         public override void sanitizeFile()
         {
             // string path = @"C:\Users\yatsi\Desktop\c#\menloInterviewApp\menloInterviewApp\test.txt";
-            // string tmp = "temp.txt";
+            string tmp = "temp.txt";
             // int numberOfBytes = 3;
             // string replace = "A255C";
             // string correct = @"A[1-9]C";
@@ -75,7 +75,7 @@ namespace formatApi
                     }
                 }
                 File.Delete(this.fileLocation);
-                File.Move(tempFile, this.fileLocation);
+                File.Move(tmp, this.fileLocation);
 
             }
             catch (System.Exception)

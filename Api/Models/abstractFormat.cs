@@ -9,7 +9,7 @@ namespace formatApi
         protected string replaceReg { get; set; }
         protected string correctReg { get; set; }
 
-        public abstract string sanitizesLine();
+        public abstract string sanitizesLine(string line);
         public abstract void sanitizeFile();
 
 
